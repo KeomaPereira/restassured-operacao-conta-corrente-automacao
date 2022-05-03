@@ -21,4 +21,13 @@ public class Util {
         return gson.fromJson(response, new TypeToken<List<CedulaOutputDto>>(){}.getType());
     }
 
+    public static boolean procurarStringLista(List<String> lista, String nome) {
+        for (String element : lista) {
+            if (element.contains(nome)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
